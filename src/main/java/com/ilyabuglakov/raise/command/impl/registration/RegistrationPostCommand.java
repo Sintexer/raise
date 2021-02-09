@@ -3,6 +3,8 @@ package com.ilyabuglakov.raise.command.impl.registration;
 import com.ilyabuglakov.raise.command.Command;
 import com.ilyabuglakov.raise.dal.dao.exception.DaoOperationException;
 import com.ilyabuglakov.raise.domain.User;
+import com.ilyabuglakov.raise.model.FormConstants;
+import com.ilyabuglakov.raise.model.Patterns;
 import com.ilyabuglakov.raise.model.response.ResponseEntity;
 import com.ilyabuglakov.raise.model.service.domain.ServiceType;
 import com.ilyabuglakov.raise.model.service.domain.UserRegistrationService;
@@ -53,6 +55,13 @@ public class RegistrationPostCommand extends Command {
             responseEntity.setRedirect(true);
             responseEntity.setLink(PropertiesStorage.getInstance().getLinks().getProperty("auth.confirm.email"));
         } else {
+            responseEntity.setAttribute("namePattern", Patterns.NAME.getPattern());
+            responseEntity.setAttribute("passwordPattern", Patterns.PASSWORD.getPattern());
+            responseEntity.setAttribute("emailLength", FormConstants.EMAIL_LENGTH.getValue());
+            responseEntity.setAttribute("nameLength", FormConstants.NAME_LENGTH.getValue());
+            responseEntity.setAttribute("surnameLength", FormConstants.SURNAME_LENGTH.getValue());
+            responseEntity.setAttribute("passwordMin", FormConstants.PASSWORD_MIN.getValue());
+            responseEntity.setAttribute("passwordMax", FormConstants.PASSWORD_MAX.getValue());
             responseEntity.setAttribute("emailPrevVal", user.getEmail());
             responseEntity.setAttribute("namePrevVal", user.getName());
             responseEntity.setAttribute("surnamePrevVal", user.getSurname());

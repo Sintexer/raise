@@ -27,7 +27,7 @@ public class UserValidator {
      * @return the boolean
      */
     public boolean isValidName(String name) {
-        return !name.matches(Patterns.NAME.getPattern());
+        return name.matches(Patterns.NAME.getPattern());
     }
 
     /**
