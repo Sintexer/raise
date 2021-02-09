@@ -1,3 +1,4 @@
+\c raise_db
 INSERT INTO role(id,
                  name)
 values (1, 'ADMIN'),

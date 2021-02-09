@@ -1,3 +1,4 @@
+\c raise_db
 CREATE TYPE characteristic AS enum ('MEMORY', 'REACTION', 'LOGIC', 'CALCULATIONS');
 CREATE TYPE status AS ENUM ('ACTIVE', 'UNCONFIRMED', 'BANNED');
 CREATE TYPE test_status AS ENUM ('NEW', 'CONFIRMED', 'BANNED');
