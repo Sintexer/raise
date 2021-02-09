@@ -97,7 +97,7 @@ from `/sql` folder:
 - `4_init_tables.sql` - will fill raise_db tables with some content, such as superuser,
   test categories and directly by tests.
 
-###Building war
+### Building war
 
 For build, you should start maven in project root directory and build `war` file
 using maven war plugin. This plugin dependency is specified in `pom.xml`: `<packaging>war</packaging>`.
@@ -111,7 +111,7 @@ archive to the Tomcat `/webapps` folder.
 After that, you need to start application server using Tomcat and access it through
 web browser.
 
-###Building at the Intellij IDEA
+### Building at the Intellij IDEA
 
 After clone from github, create `Tomcat 9.0.40` configuration. 
 Click `fix` button and choose `raise_war_exploded`. 
@@ -130,7 +130,7 @@ ___
 ## Testing
 
 Some tests require test database. So, if you need to run project tests, create
-raise_test_db by scripts from `/sql/test_db` folder.
+`raise_test_db` by scripts from `/sql/test_db` folder.
 
 After creating and filling this database, nothing can stop you from running tests.
 
