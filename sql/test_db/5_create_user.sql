@@ -1,6 +1,6 @@
 CREATE USER raise_user_test WITH PASSWORD 'admin';
 
--- GRANT SELECT, INSERT, UPDATE, DELETE ON DATABASE raise_db to raise_user;
+GRANT CONNECT ON DATABASE raise_db_test TO raise_user_test;
 \c raise_db_test
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO raise_user_test;
 GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO raise_user_test;
