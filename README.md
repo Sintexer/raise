@@ -32,41 +32,41 @@ Each test is specified by an arbitrary set of four characteristics:
 - Reaction
 
 So, when you pass the test, result will affect the performance of your personal
-characteristics set. This is how statistics are kept. Statistics cen be viewed in 
+characteristics set. This is how statistics are kept. Statistics cen be viewed in
 user profile.
 
 ___
 
 ## General info
 
-Time for passing the test is not limited. After the end of testing user will see its result and 
+Time for passing the test is not limited. After the end of testing user will see its result and
 questions, where he made a mistake. Even semi-correct answers can bring points.
 
-Subject rights in applications are specified by the set of permissions. For example, 
+Subject rights in applications are specified by the set of permissions. For example,
 to confirm the test, you must have "confirm:test" permission. Subject permissions set
-is known from subjects roles set. Each role has specified suite of permissions. 
+is known from subjects roles set. Each role has specified suite of permissions.
 
 #### Roles
-- Guest 
-    - Can pass tests, but result won't be saved. 
+- Guest
+    - Can pass tests, but result won't be saved.
     - Can view comments and user profiles.
-    - Can log in or register anytime. 
+    - Can log in or register anytime.
     - Don't have access to test creator.
-- User 
-    - Сan pass test, result will be saved. Each time when user passes the same test, 
-  new result will be saved only if it's greater than previous. 
-    - Сan write comments. 
-    - Сan see other users profiles and edit his own profile. 
+- User
+    - Сan pass test, result will be saved. Each time when user passes the same test,
+      new result will be saved only if it's greater than previous.
+    - Сan write comments.
+    - Сan see other users profiles and edit his own profile.
     - Have access to test creator. After adding the test is sent for moderation. Maximum user can have 3 unapproved
-  tests simultaneously.
-- Admin 
-  - Has all permissions in application.
-  - Can ban comments.
-  - Has access to 'admin panel', where he can
-    see all new tests and confirm or ban them. 
-  - Status of test created by an admin
-    is 'CONFIRMED' by default.
-    
+      tests simultaneously.
+- Admin
+    - Has all permissions in application.
+    - Can ban comments.
+    - Has access to 'admin panel', where he can
+      see all new tests and confirm or ban them.
+    - Status of test created by an admin
+      is 'CONFIRMED' by default.
+
 ___
 ## Showcase
 
@@ -97,7 +97,9 @@ from `/sql` folder:
 - `4_init_tables.sql` - will fill raise_db tables with some content, such as superuser,
   test categories and directly by tests.
 
-For build, you should start maven in project root directory and build `war` file 
+###Building war
+
+For build, you should start maven in project root directory and build `war` file
 using maven war plugin. This plugin dependency is specified in `pom.xml`: `<packaging>war</packaging>`.
 
 `mvn compile war:war
@@ -108,6 +110,22 @@ archive to the Tomcat `/webapps` folder.
 
 After that, you need to start application server using Tomcat and access it through
 web browser.
+
+###Building at the Intellij IDEA
+
+After clone from github, create `Tomcat 9.0.40` configuration. 
+Click `fix` button and choose `raise_war_exploded`. 
+
+Note that application path should be `/`. To do so in IntelliJ IDEA go to `Edit configuration`
+And at then, in deployment, change application context.
+
+![app-context1](readme/app-context1.png)
+![app-context2](readme/app-context2.png)
+
+If application can't run, check if all dependencies are downloaded and libraries are added to `lib` folder. 
+You can check that at `Project structure -> Artifacts -> raise:war exploded -> Available Elements (on the right)`
+
+![project-structure](readme/project-structure.png)
 ___
 ## Testing
 
@@ -118,31 +136,31 @@ After creating and filling this database, nothing can stop you from running test
 
 ___
 ## Usage
-After running webapp in Tomcat container, you can start using application. 
+After running webapp in Tomcat container, you can start using application.
 To start, you can register or try to pass tests without authorization. If you choose
 to register, then click on `Sign up` button at the top-right corner and fill up the
 registration form. After sending a form, you must confirm your email. Todo so, follow
-the link from your email inbox. Maybe check spam folder. After that, simply login in 
+the link from your email inbox. Maybe check spam folder. After that, simply login in
 to your new account.
 
-If you don't want to register, you can log in to any of prepared accounts. 
+If you don't want to register, you can log in to any of prepared accounts.
 
 ### Prepared accounts
-To log in 
+To log in
 as **admin** try email: `admin@gmail.com` with password: `121212`.
 
-To log in as simple user, 
+To log in as simple user,
 try email:`user@gmail.com` and password:`121212`.
 
 ### Changing locale
-Raise application is localized to **English US**, **Russian** and **Swedish**. You can 
-change locale anytime by clicking on the globe button at right side of navbar. Then choose 
+Raise application is localized to **English US**, **Russian** and **Swedish**. You can
+change locale anytime by clicking on the globe button at right side of navbar. Then choose
 preferred language in the modal window.
 
 ### Passing test
 To past the test you first need to choose it. You can view all the tests in the catalog.
-Link to catalog is signed as `Tests` at the navbar. When choose a test, 
-first you will see test preview there are described some test parameters and comment 
+Link to catalog is signed as `Tests` at the navbar. When choose a test,
+first you will see test preview there are described some test parameters and comment
 section also will be here. To start testing, click `Start testing` button.
 
 After finishing the test, you will see test result page. If you are authenticated, your
@@ -150,13 +168,13 @@ results also will be saved.
 
 ### Creating test
 To create test, follow to the constructor by clicking `Constructor` link at the navbar.
-There you can dynamically form test. When test is complete, submit it and wait until 
+There you can dynamically form test. When test is complete, submit it and wait until
 an admin confirm it.
 
 ### Administrating the application
 If you have admin permissions, then `Admin panel` button will appear at your nav. At the
 admin panel page you can confirm or ban new tests. Admin panel provides some information
-about each test, such as questions amount and questions names. 
+about each test, such as questions amount and questions names.
 You also can view each test to check all the information.
 
 
