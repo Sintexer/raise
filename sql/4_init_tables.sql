@@ -21,8 +21,7 @@ INSERT INTO test_category(id, category, parent_id) VALUES (1, 'Programming', NUL
                                                           (5, 'C++', 1),
                                                           (6, 'Algebra', 2),
                                                           (7, 'Geometry', 2),
-                                                          (8, 'Wildlife', 3),
-                                                          (9, 'FOR_TESTS', NULL);
+                                                          (8, 'Wildlife', 3);
 SELECT setval('test_category_id_seq', (SELECT MAX(id) from test_category));
 
 INSERT INTO usr(id, email, name, surname, password, status, registration_date)
@@ -38,7 +37,7 @@ VALUES (1, 1, 1),
 SELECT setval('user_roles_id_seq', (SELECT MAX(id) from user_roles));
 
 INSERT INTO test(id, author_id, status, test_name,difficulty,category_id)
-VALUES (8, 1, 'CONFIRMED', 'Test test', 1, 9),
+VALUES
        (1, 1, 'CONFIRMED', 'Math test 1', 1, 6),
        (2, 1, 'CONFIRMED', 'Math test 2', 1, 6),
        (3, 1, 'CONFIRMED', 'Math test 3', 1, 6),
