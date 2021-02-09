@@ -1,0 +1,1 @@
+DROP DATABASE IF EXISTS raise_db_test

@@ -1,0 +1,37 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>CustomLib</short-name>
+
+    <tag>
+        <name>link</name>
+        <tag-class>com.ilyabuglakov.raise.model.tag.LinkTag</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>key</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+
+    </tag>
+    <tag>
+        <name>timestamp</name>
+        <tag-class>com.ilyabuglakov.raise.model.tag.TimestampTag</tag-class>
+        <body-content>scriptless</body-content>
+
+        <attribute>
+            <name>timestamp</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.time.LocalDateTime</type>
+        </attribute>
+        <attribute>
+            <name>locale</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <type>java.lang.String</type>
+        </attribute>
+
+    </tag>
+</taglib>
