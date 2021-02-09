@@ -44,7 +44,7 @@ VALUES (8, 1, 'CONFIRMED', 'Test test', 1, 9),
        (3, 1, 'CONFIRMED', 'Math test 3', 1, 6),
        (4, 1, 'CONFIRMED', 'Animals 1', 1, 8),
        (5, 1, 'CONFIRMED', 'Java 1', 1, 4),
-       (6, 1, 'CONFIRMED', 'С++ 1', 1, 5),
+       (6, 1, 'CONFIRMED', 'C++ 1', 1, 5),
        (7, 1, 'NEW', 'Java 2', 1, 4);
 
 

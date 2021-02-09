@@ -108,6 +108,12 @@ archive to the Tomcat `/webapps` folder.
 
 After that, you need to start application server using Tomcat and access it through
 web browser.
+
+Note that application path should be `/`. To do so in IntelliJ IDEA go to `Edit configuration`
+And at the deployment change application context.
+
+![img.png](img.png)
+![img_1.png](img_1.png)
 ___
 ## Testing
 

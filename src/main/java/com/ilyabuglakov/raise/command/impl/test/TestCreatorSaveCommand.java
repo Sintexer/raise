@@ -66,9 +66,9 @@ public class TestCreatorSaveCommand extends Command {
             }
         } else {
             testService.save(test, authService.getEmail());
-            responseEntity.setAttribute("testName", test.getTestName());
+            responseEntity.setRedirect(true);
             responseEntity.setLink(PropertiesStorage.getInstance()
-                    .getPages()
+                    .getLinks()
                     .getProperty("test.creator.save.success"));
         }
 

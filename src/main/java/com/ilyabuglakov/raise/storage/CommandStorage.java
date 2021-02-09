@@ -15,6 +15,7 @@ import com.ilyabuglakov.raise.command.impl.rest.ConfirmTestCommand;
 import com.ilyabuglakov.raise.command.impl.rest.DeleteCommentCommand;
 import com.ilyabuglakov.raise.command.impl.test.CommentPostCommand;
 import com.ilyabuglakov.raise.command.impl.test.TestCatalogPageCommand;
+import com.ilyabuglakov.raise.command.impl.test.TestCreateSuccessGetCommand;
 import com.ilyabuglakov.raise.command.impl.test.TestCreatorGetCommand;
 import com.ilyabuglakov.raise.command.impl.test.TestCreatorSaveCommand;
 import com.ilyabuglakov.raise.command.impl.test.TestPreviewPageCommand;
@@ -63,6 +64,7 @@ public class CommandStorage {
         addCommand(RequestMethod.GET, "registration", new RegistrationGetCommand());
         addCommand(RequestMethod.GET, "changeLocale", new ChangeLocalizationCommand());
         addCommand(RequestMethod.GET, "test.creator", new TestCreatorGetCommand());
+        addCommand(RequestMethod.GET, "test.creator.save.success", new TestCreateSuccessGetCommand());
         addCommand(RequestMethod.GET, "test.catalog", new TestCatalogPageCommand());
         addCommand(RequestMethod.GET, "test.testing", new TestingGetCommand());
         addCommand(RequestMethod.GET, "test.preview", new TestPreviewPageCommand());
