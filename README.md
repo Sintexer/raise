@@ -109,11 +109,21 @@ archive to the Tomcat `/webapps` folder.
 After that, you need to start application server using Tomcat and access it through
 web browser.
 
-Note that application path should be `/`. To do so in IntelliJ IDEA go to `Edit configuration`
-And at the deployment change application context.
+### Building at the Intellij IDEA
 
-![img.png](img.png)
-![img_1.png](img_1.png)
+After clone from github, create `Tomcat 9.0.40` configuration. 
+Click `fix` button and choose `raise_war_exploded`. 
+
+Note that application path should be `/`. To do so in IntelliJ IDEA go to `Edit configuration`
+And at then, in deployment, change application context.
+
+![app-context1](readme/app-context1.png)
+![app-context2](readme/app-context2.png)
+
+If application can't run, check if all dependencies are downloaded and libraries are added to `lib` folder. 
+You can check that at `Project structure -> Artifacts -> raise:war exploded -> Available Elements (on the right)`
+
+![project-structure](readme/project-structure.png)
 ___
 ## Testing
 
