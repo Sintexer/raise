@@ -37,7 +37,7 @@
     <main class="main">
         <div class="section">
             <div class="content">
-                <div class="section block centered padding-0">
+                <div class="section items-gap-vertical block centered padding-0">
                     <c:if test="${not testWasntPosted}">
                         <span class="bold">${resultFormatted}</span>
                     </c:if>

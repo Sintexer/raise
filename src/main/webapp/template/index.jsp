@@ -229,7 +229,7 @@
                             </div>
                             <div class="card-footer">
                                 <span>author:</span>
-                                <a href="<ct:link key="user.profile"/>?userId=${test.author.id}">
+                                <a href="<ct:link key="profile"/>?userId=${test.author.id}">
                                         ${test.author.name} ${test.author.surname}
                                 </a>
                             </div>

@@ -51,7 +51,7 @@
                                             <input class="questionId" type="number" name="questionId" hidden
                                                    value="${question.id}">
                                             <p class="margin-y-1rem question-header test-text-block">${question.name}</p>
-                                            <span class="test-text-block">${question.content}</span>
+                                            <input class="test-text-block" value="${question.content}" disabled></input>
 
                                             <ul class="answers margin-l-2rem">
                                                 <c:forEach var="answer" items="${question.answers}">
@@ -68,7 +68,7 @@
                                                                        name="${loop.index}">
                                                             </c:otherwise>
                                                         </c:choose>
-                                                        <span class="font-md">${answer.content}</span>
+                                                        <input class="font-md" value="${answer.content}" disabled></input>
                                                     </li>
                                                 </c:forEach>
                                             </ul>
