@@ -94,7 +94,10 @@
                                             <button type="button" class="btn btn-black btn-com-del" onclick="deleteQuestion(${comment.id},
                                                 '<ct:link key="rest.delete.comment"/>')">&times;</button>
                                             </shiro:hasPermission>
-                                            <span class="font-md">${comment.user.name} ${comment.user.surname}</span>
+                                            <a href="<ct:link key="profile"/>?userId=${comment.user.id}">
+                                                    ${comment.user.name} ${comment.user.surname}
+                                            </a>
+<%--                                            <span class="font-md">${comment.user.name} ${comment.user.surname}</span>--%>
                                             <span><ct:timestamp locale="${pageLocale}"  timestamp="${comment.timestamp}"/></span>
                                             <span>
 <%--                                           --%>
