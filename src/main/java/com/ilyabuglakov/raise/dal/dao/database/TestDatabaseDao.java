@@ -225,7 +225,7 @@ public class TestDatabaseDao extends DatabaseDao implements TestDao {
             throws DaoOperationException {
         return buildTestList(findByStatement(() -> {
             PreparedStatement statement = prepareStatement(SELECT_TESTS_BY_NAME_CATEGORY_STATUS_LIMIT_OFFSET);
-            statement.setString(1, name + "%");
+            statement.setString(1, "%" + name + "%");
             statement.setInt(2, category.getId());
             statement.setObject(3, status, Types.OTHER);
             statement.setInt(4, limit);
@@ -240,7 +240,7 @@ public class TestDatabaseDao extends DatabaseDao implements TestDao {
             throws DaoOperationException {
         return buildTestList(findByStatement(() -> {
             PreparedStatement statement = prepareStatement(SELECT_TESTS_BY_NAME_PARENT_CATEGORY_STATUS_LIMIT_OFFSET);
-            statement.setString(1, name + "%");
+            statement.setString(1, "%" + name + "%");
             statement.setInt(2, category.getId());
             statement.setObject(3, status, Types.OTHER);
             statement.setInt(4, limit);
@@ -254,7 +254,7 @@ public class TestDatabaseDao extends DatabaseDao implements TestDao {
             throws DaoOperationException {
         return buildTestList(findByStatement(() -> {
             PreparedStatement statement = prepareStatement(SELECT_TESTS_BY_NAME_STATUS_LIMIT_OFFSET);
-            statement.setString(1, name + "%");
+            statement.setString(1,"%" + name + "%");
             statement.setObject(2, status, Types.OTHER);
             statement.setInt(3, limit);
             statement.setInt(4, from);
